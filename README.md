@@ -52,7 +52,7 @@ go build -o ipaddweb web.go
 [ipadds.zip](https://github.com/Maskphp/ipadds/releases/tag/v1)  编译后的各平台的可执行文件，使用方法详情 [使用方法](#使用方法) 
 
 `main.go`     程序的入口文件
-
+ 
 
 ```bash
 -o 需要输出的文件名
