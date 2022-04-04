@@ -49,16 +49,16 @@ go build -o ipaddweb web.go
 
 `db`          本地数据库文件，可以在原作者库内下载到最新库
 
-`ipadds.zip`  编译后的各平台的可执行文件，使用方法详情 [使用方法](#使用方法) 
+[ipadds.zip](https://github.com/Maskphp/ipadds/releases/tag/v1)  编译后的各平台的可执行文件，使用方法详情 [使用方法](#使用方法) 
 
 `main.go`     程序的入口文件
 
 
 ```bash
 -o 需要输出的文件名
-CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -o ipadds_mac main.go #编译mac架构
-CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -o ipadds_win main.go #编译win
-go build -o ipadds main.go
+CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -ldflags "-s -w " -o ipadds_mac_x64 main.go #编译mac x64架构
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -ldflags "-s -w " -o ipadds_win_x64 main.go #编译win x64架构
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-s -w " -o ipadds_linux_x64 main.go #编译linux  x64架构
 ```
 
 #### 写在最后
